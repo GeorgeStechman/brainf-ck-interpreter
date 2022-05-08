@@ -55,11 +55,19 @@ const interpret = (args,inputs) => {
                 instructionPointer++
                 break;
             case '+':
-                array[pointer]++ // Increments the value at the pointer of the main array
+                if (array[pointer] ==127) {array[pointer] = 0}
+                else {
+                    array[pointer]++ // Increments the value at the pointer of the main array
+                }
+                
                 instructionPointer++
                 break;
             case '-':
+                if (array[pointer] ==0) {array[pointer] = 127} 
+                else {
+
                 array[pointer]-- // Decrements the value at the pointer of the main array
+                }
                 instructionPointer++
                 break;
             case ',':
