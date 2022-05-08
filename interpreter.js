@@ -75,9 +75,7 @@ const interpret = (args,inputs) => {
                 }
                 break;
             case ']': 
-            if (array[pointer] == 0) {
-                instructionPointer++ // If the value at the pointer is 0, skip past
-            } else {
+            if (array[pointer] != 0) {
                 for (const property in matches) {
                     if (matches[property] == instructionPointer) {                 
                         instructionPointer = parseInt(property) +1 // If the value at the pointer isnt 0, execute the code inside the loop again
