@@ -17,7 +17,7 @@ const interpret = (args,inputs) => {
     let pointer = 0 // Uses to traverse through the main array
     let instructionPointer = 0 // Used to traverse through the input array
 
-    //revursive function to match each parentheses to its respective closing parentheses
+    //recursive function to match each parentheses to its respective closing parentheses
     let open = args.match(/\[/g)?.length 
     let close = args.match(/\]/g)?.length 
     if (open !== close) return console.log('Error')
@@ -95,7 +95,7 @@ const interpret = (args,inputs) => {
                 instructionPointer++ // ignores all other characters
             
         }
-    } return output.join('') //Ouputs the array as a string
+    } return output.join('') //Outputs the array as a string
 }
 
 console.log(interpret(arguments,inputs))
